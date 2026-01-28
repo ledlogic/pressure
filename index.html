@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRESSURE Character Sheets</title>
+    <link rel="stylesheet" href="css/character-sheet.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="controls">
+        <h1>PRESSURE Character Viewer</h1>
+        <select id="character-select">
+            <option value="">Select a Character...</option>
+        </select>
+        <button id="prev-char">← Previous</button>
+        <button id="next-char">Next →</button>
+    </div>
+
+    <div id="character-sheet-container">
+        <!-- Background image -->
+        <div class="sheet-background"></div>
+        
+        <!-- Character name overlay -->
+        <div id="char-name" class="field"></div>
+        
+        <!-- Attributes -->
+        <div id="attr-charisma" class="field attr-value"></div>
+        <div id="attr-agility" class="field attr-value"></div>
+        <div id="attr-strength" class="field attr-value"></div>
+        <div id="attr-education" class="field attr-value"></div>
+        
+        <!-- Penalties -->
+        <div id="penalty-charisma" class="field penalty-value"></div>
+        <div id="penalty-agility" class="field penalty-value"></div>
+        <div id="penalty-strength" class="field penalty-value"></div>
+        <div id="penalty-education" class="field penalty-value"></div>
+        
+        <!-- Charisma Skills -->
+        <div id="skill-bargain" class="field skill-value"></div>
+        <div id="skill-con" class="field skill-value"></div>
+        <div id="skill-leadership" class="field skill-value"></div>
+        <div id="skill-perception" class="field skill-value"></div>
+        <div id="skill-streetwise" class="field skill-value"></div>
+        
+        <!-- Agility Skills -->
+        <div id="skill-stealth" class="field skill-value"></div>
+        <div id="skill-drive" class="field skill-value"></div>
+        <div id="skill-pilot" class="field skill-value"></div>
+        <div id="skill-ranged" class="field skill-value"></div>
+        <div id="skill-dodge" class="field skill-value"></div>
+        
+        <!-- Strength Skills -->
+        <div id="skill-climb" class="field skill-value"></div>
+        <div id="skill-handToHand" class="field skill-value"></div>
+        <div id="skill-leap" class="field skill-value"></div>
+        <div id="skill-melee" class="field skill-value"></div>
+        <div id="skill-swim" class="field skill-value"></div>
+        
+        <!-- Education Skills -->
+        <div id="skill-computers" class="field skill-value"></div>
+        <div id="skill-engineering" class="field skill-value"></div>
+        <div id="skill-medicine" class="field skill-value"></div>
+        <div id="skill-navigation" class="field skill-value"></div>
+        <div id="skill-science" class="field skill-value"></div>
+        
+        <!-- Totals (Attribute + Skill) -->
+        <div id="total-bargain" class="field total-value"></div>
+        <div id="total-con" class="field total-value"></div>
+        <div id="total-leadership" class="field total-value"></div>
+        <div id="total-perception" class="field total-value"></div>
+        <div id="total-streetwise" class="field total-value"></div>
+        <div id="total-stealth" class="field total-value"></div>
+        <div id="total-drive" class="field total-value"></div>
+        <div id="total-pilot" class="field total-value"></div>
+        <div id="total-ranged" class="field total-value"></div>
+        <div id="total-dodge" class="field total-value"></div>
+        <div id="total-climb" class="field total-value"></div>
+        <div id="total-handToHand" class="field total-value"></div>
+        <div id="total-leap" class="field total-value"></div>
+        <div id="total-melee" class="field total-value"></div>
+        <div id="total-swim" class="field total-value"></div>
+        <div id="total-computers" class="field total-value"></div>
+        <div id="total-engineering" class="field total-value"></div>
+        <div id="total-medicine" class="field total-value"></div>
+        <div id="total-navigation" class="field total-value"></div>
+        <div id="total-science" class="field total-value"></div>
+        
+        <!-- Combat/Status -->
+        <div id="damage" class="field"></div>
+        <div id="pressure-bonus" class="field"></div>
+        <div id="pressure-level" class="field"></div>
+        <div id="experience" class="field"></div>
+        
+        <!-- Episodes -->
+        <div id="episodes" class="field episodes-text"></div>
+        
+        <!-- Equipment -->
+        <div id="equipment" class="field equipment-text"></div>
+    </div>
+
+    <script src="js/character-sheet.js"></script>
+</body>
+</html>
