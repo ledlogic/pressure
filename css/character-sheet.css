@@ -193,60 +193,51 @@ button:disabled {
 #total-science { top: 808px; }
 
 /* Combat/Status Section */
-#damage {
-    top: 865px;
-    left: 120px;
+.combat-status {
+    left: 410px;
     width: 80px;
+}
+
+#damage {
+    top: 840px;
 }
 
 #pressure-bonus {
-    top: 915px;
-    left: 120px;
-    width: 80px;
+    top: 904px;
 }
 
 #pressure-level {
-    top: 965px;
-    left: 120px;
-    width: 80px;
+    top: 960px;
 }
 
 /* Episodes */
 #episodes {
-    top: 1005px;
-    left: 90px;
-    width: 800px;
-    height: 80px;
-    font-size: 14px;
-    text-align: left;
+	top: 1005px;
+    left: 424px;
+    width: 488px;
+    height: 106px;
     overflow: hidden;
 }
 
 /* Equipment */
+#equipment,#experience {
+	text-align: left;
+}
+
 #equipment {
-    top: 1120px;
-    left: 90px;
-    width: 800px;
-    height: 180px;
-    font-size: 12px;
-    text-align: left;
-    overflow-y: auto;
-    line-height: 1.4;
+	top: 1174px;
+    left: 104px;
+    width: 808px;
+    height: 134px;
 }
 
 /* Experience Points */
 #experience {
-    top: 1350px;
-    right: 80px;
+	top: 1336px;
+    left: 876px;
+    width: 808px;
+    height: 134px;
     width: 60px;
-}
-
-/* Styling for text areas */
-.episodes-text, .equipment-text {
-    white-space: pre-wrap;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 4px;
 }
 
 /* Value highlighting */

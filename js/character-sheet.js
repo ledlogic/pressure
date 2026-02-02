@@ -104,10 +104,10 @@ $(document).ready(function() {
         displaySkill('science', char.skills.science, char.attributes.education, y);y += dy;
         
         // Display combat/status values
-        $('#damage').text(char.damage);
-        $('#pressure-bonus').text(char.pressureBonus);
-        $('#pressure-level').text(char.pressureLevel);
-        $('#experience').text(char.experiencePoints || 0);
+        $('#damage').text(char.damage).addClass("combat-status");
+        $('#pressure-bonus').text(char.pressureBonus).addClass("combat-status");
+        $('#pressure-level').text(char.pressureLevel).addClass("combat-status");
+        $('#experience').text(char.experiencePoints || 0).addClass("combat-status");
         
         // Display episodes
         $('#episodes').text(char.episodes || '');
