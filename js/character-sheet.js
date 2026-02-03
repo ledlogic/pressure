@@ -17,10 +17,8 @@ $(document).ready(function() {
             );
         });
         
-        // Load first character by default
-        if (characters.length > 0) {
-            loadCharacter(0);
-        }
+		// Load first character by default
+		hideCharacter();
     }).fail(function() {
         alert('Error loading character data. Make sure characters.json is in the same directory.');
     });
@@ -33,24 +31,10 @@ $(document).ready(function() {
             loadCharacter(currentIndex);
         }
     });
-
-    // Previous button handler
-    $('#prev-char').on('click', function() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            $('#character-select').val(currentIndex);
-            loadCharacter(currentIndex);
-        }
-    });
-
-    // Next button handler
-    $('#next-char').on('click', function() {
-        if (currentIndex < characters.length - 1) {
-            currentIndex++;
-            $('#character-select').val(currentIndex);
-            loadCharacter(currentIndex);
-        }
-    });
+	
+	function hideCharacter() {
+		$("#character-sheet-container").hide();
+	}
 
     // Function to load and display a character
     function loadCharacter(index) {
@@ -114,6 +98,9 @@ $(document).ready(function() {
         
         // Display equipment
         $('#equipment').text(char.equipment);
+
+		$(".controls").hide();
+		$("#character-sheet-container").fadeIn();
     }
 
     // Helper function to display skill and total

@@ -7,9 +7,11 @@
 }
 
 body {
+	margin-top: 100px;
+}
+
+body {
     font-family: 'Courier New', monospace;
-    background: #1a1a1a;
-    color: #fff;
     padding: 20px;
 }
 
@@ -70,8 +72,6 @@ button:disabled {
     width: 1000px;
     height: 1414px; /* Approximate A4 aspect ratio */
     margin: 0 auto;
-    background: #2a2a2a;
-    box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
 }
 
 .sheet-background {
